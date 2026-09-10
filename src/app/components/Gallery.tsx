@@ -77,9 +77,7 @@ export default function Gallery() {
                 priority={i === 0}
               />
             </div>
-            <div className="px-4 py-3">
-              <p className="text-sm font-semibold text-white/90 truncate">{img.title}</p>
-            </div>
+
           </button>
         ))}
       </div>
