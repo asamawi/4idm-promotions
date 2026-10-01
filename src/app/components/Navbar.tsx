@@ -39,15 +39,20 @@ export default function Navbar() {
         </div>
 
         {/* Logo — right side in RTL */}
-        <Link href="/" onClick={() => setIsOpen(false)}>
-          <Image
-            src="/icon-4idm.png"
-            alt="أربعة أفكار للدعاية والإعلان"
-            width={72}
-            height={72}
-            className="object-contain h-14 w-auto"
-            priority
-          />
+        <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
+          <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
+            <Image
+              src="/icon-4idm.png"
+              alt="أربعة أفكار للدعاية والإعلان"
+              width={44}
+              height={44}
+              className="object-contain"
+              priority
+            />
+          </div>
+          <span className="hidden sm:block text-[#f0c040] text-sm font-bold leading-tight text-right">
+            أربعة أفكار<br />للدعاية والإعلان
+          </span>
         </Link>
 
         {/* Hamburger — mobile only */}
