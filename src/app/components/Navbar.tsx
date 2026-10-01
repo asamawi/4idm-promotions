@@ -41,7 +41,7 @@ export default function Navbar() {
         {/* Logo — right side in RTL */}
         <Link href="/" onClick={() => setIsOpen(false)}>
           <Image
-            src="/logo-icon.png"
+            src="/logo-4idm.png"
             alt="أربعة أفكار للدعاية والإعلان"
             width={72}
             height={72}

@@ -54,9 +54,10 @@ export default function Home() {
           {/* Logo */}
           <div className="mx-auto mb-6 w-40 h-40 relative">
             <Image
-              src="/logo-icon.png"
+              src="/logo-4idm.png"
               alt="أربعة أفكار للدعاية والإعلان"
               fill
+              sizes="160px"
               className="object-contain drop-shadow-2xl"
               priority
             />

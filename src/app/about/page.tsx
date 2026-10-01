@@ -29,9 +29,10 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto text-center">
           <div className="relative w-36 h-36 mx-auto mb-6">
             <Image
-              src="/logo-icon.png"
+              src="/logo-4idm.png"
               alt="أربعة أفكار للدعاية والإعلان"
               fill
+              sizes="144px"
               className="object-contain drop-shadow-lg"
             />
           </div>
