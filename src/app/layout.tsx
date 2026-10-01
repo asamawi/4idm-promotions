@@ -11,8 +11,15 @@ const notoSansArabic = Noto_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: "أربعة أفكار للدعاية والإعلان — خدماتنا",
+  title: "أربعة أفكار للدعاية والإعلان",
   description: "حلول إعلانية متكاملة من الفكرة إلى التنفيذ — Four Ideas Advertising",
+  icons: {
+    icon: [
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: { url: "/icon.png", sizes: "512x512", type: "image/png" },
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
