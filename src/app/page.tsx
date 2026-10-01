@@ -51,21 +51,21 @@ export default function Home() {
         <div className="absolute bottom-[-60px] right-[-60px] w-64 h-64 rounded-full bg-[#f0c040]/10 pointer-events-none" />
 
         <div className="relative z-10 text-center px-6 py-16 max-w-2xl mx-auto">
-          {/* Logo */}
-          <div className="mx-auto mb-6 w-44 h-44 relative">
+          {/* Full brand logo */}
+          <div className="mx-auto mb-8 w-72 md:w-96 relative aspect-square">
             <Image
-              src="/icon-4idm.png"
-              alt="أربعة أفكار للدعاية والإعلان"
+              src="/logo-hero.png"
+              alt="أربعة أفكار للدعاية والإعلان — Four Ideas Advertising"
               fill
-              sizes="176px"
-              className="object-contain drop-shadow-xl"
+              sizes="(max-width: 768px) 288px, 384px"
+              className="object-contain drop-shadow-2xl"
               priority
             />
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-black text-[#1a2a6c] leading-tight mb-3">
-            أربعة أفكار للدعاية والإعلان
-          </h1>
+          {/* H1 visually hidden but present for SEO */}
+          <h1 className="sr-only">أربعة أفكار للدعاية والإعلان — Four Ideas Advertising</h1>
+
           <p className="text-[#e07b00] text-xl font-medium mb-10">
             حلول إعلانية متكاملة ... من الفكرة إلى التنفيذ
           </p>
