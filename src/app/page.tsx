@@ -45,41 +45,41 @@ export default function Home() {
   return (
     <div dir="rtl">
       {/* Hero */}
-      <section className="relative min-h-[calc(100vh-4rem)] bg-gradient-to-br from-[#1a2a6c] via-[#1a4f8a] to-[#0d1540] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[calc(100vh-4rem)] bg-white flex items-center justify-center overflow-hidden">
         {/* Decorative circles */}
-        <div className="absolute top-[-80px] left-[-80px] w-80 h-80 rounded-full bg-white/5 pointer-events-none" />
-        <div className="absolute bottom-[-60px] right-[-60px] w-64 h-64 rounded-full bg-[#f0c040]/5 pointer-events-none" />
+        <div className="absolute top-[-80px] left-[-80px] w-80 h-80 rounded-full bg-[#1a2a6c]/5 pointer-events-none" />
+        <div className="absolute bottom-[-60px] right-[-60px] w-64 h-64 rounded-full bg-[#f0c040]/10 pointer-events-none" />
 
         <div className="relative z-10 text-center px-6 py-16 max-w-2xl mx-auto">
           {/* Logo */}
-          <div className="mx-auto mb-6 w-40 h-40 relative">
+          <div className="mx-auto mb-6 w-44 h-44 relative">
             <Image
-              src="/logo-4idm.png"
+              src="/icon-4idm.png"
               alt="أربعة أفكار للدعاية والإعلان"
               fill
-              sizes="160px"
-              className="object-contain drop-shadow-2xl"
+              sizes="176px"
+              className="object-contain drop-shadow-xl"
               priority
             />
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-black text-white leading-tight mb-3">
+          <h1 className="text-4xl md:text-5xl font-black text-[#1a2a6c] leading-tight mb-3">
             أربعة أفكار للدعاية والإعلان
           </h1>
-          <p className="text-[#f0c040] text-xl font-medium mb-10">
+          <p className="text-[#e07b00] text-xl font-medium mb-10">
             حلول إعلانية متكاملة ... من الفكرة إلى التنفيذ
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/services"
-              className="bg-[#f0c040] text-[#1a2a6c] font-black px-8 py-3 rounded-full text-lg hover:bg-yellow-300 transition-colors shadow-lg"
+              className="bg-[#1a2a6c] text-white font-black px-8 py-3 rounded-full text-lg hover:bg-[#0d1540] transition-colors shadow-lg"
             >
               اكتشف خدماتنا
             </Link>
             <Link
               href="/about"
-              className="border-2 border-white text-white font-bold px-8 py-3 rounded-full text-lg hover:bg-white/10 transition-colors"
+              className="border-2 border-[#1a2a6c] text-[#1a2a6c] font-bold px-8 py-3 rounded-full text-lg hover:bg-[#1a2a6c]/10 transition-colors"
             >
               من نحن
             </Link>
