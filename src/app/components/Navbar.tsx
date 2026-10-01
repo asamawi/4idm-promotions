@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -38,14 +39,15 @@ export default function Navbar() {
         </div>
 
         {/* Logo — right side in RTL */}
-        <Link href="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
-          <div className="text-center">
-            <p className="text-[#f0c040] text-sm font-bold leading-tight">أربعة أفكار للدعاية والإعلان</p>
-            <p className="text-white/60 text-xs tracking-wide">FOUR IDEAS ADVERTISING</p>
-          </div>
-          <div className="w-11 h-11 rounded-full bg-white flex items-center justify-center border-2 border-[#f0c040] flex-shrink-0">
-            <span className="text-xl font-black text-[#1a2a6c] leading-none">4</span>
-          </div>
+        <Link href="/" onClick={() => setIsOpen(false)}>
+          <Image
+            src="/logo.jpg"
+            alt="أربعة أفكار للدعاية والإعلان"
+            width={72}
+            height={72}
+            className="object-contain h-14 w-auto"
+            priority
+          />
         </Link>
 
         {/* Hamburger — mobile only */}

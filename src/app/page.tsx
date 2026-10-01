@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const services = [
@@ -51,8 +52,14 @@ export default function Home() {
 
         <div className="relative z-10 text-center px-6 py-16 max-w-2xl mx-auto">
           {/* Logo */}
-          <div className="w-24 h-24 rounded-full bg-white mx-auto flex items-center justify-center border-4 border-[#f0c040] shadow-2xl mb-6">
-            <span className="text-4xl font-black text-[#1a2a6c] leading-none">4</span>
+          <div className="mx-auto mb-6 w-40 h-40 relative">
+            <Image
+              src="/logo.jpg"
+              alt="أربعة أفكار للدعاية والإعلان"
+              fill
+              className="object-contain drop-shadow-2xl"
+              priority
+            />
           </div>
 
           <h1 className="text-4xl md:text-5xl font-black text-white leading-tight mb-3">

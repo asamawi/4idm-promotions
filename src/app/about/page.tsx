@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "من نحن — أربعة أفكار للدعاية والإعلان",
@@ -26,8 +27,13 @@ export default function AboutPage() {
       {/* Company story */}
       <section className="bg-white py-14 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="w-20 h-20 rounded-full bg-[#1a2a6c] mx-auto flex items-center justify-center border-4 border-[#f0c040] shadow-lg mb-6">
-            <span className="text-3xl font-black text-white leading-none">4</span>
+          <div className="relative w-36 h-36 mx-auto mb-6">
+            <Image
+              src="/logo.jpg"
+              alt="أربعة أفكار للدعاية والإعلان"
+              fill
+              className="object-contain drop-shadow-lg"
+            />
           </div>
           <h2 className="text-2xl font-black text-[#1a2a6c] mb-5">قصتنا</h2>
           <p className="text-gray-600 text-lg leading-relaxed">
