@@ -20,13 +20,15 @@ export default function Footer() {
             </div>
           ))}
         </div>
-        <a
-          href="mailto:info@4idm.com.sa"
-          className="flex items-center gap-2 bg-white/10 hover:bg-white/20 transition-colors rounded-full px-5 py-2.5 text-white text-sm"
-        >
-          <span>✉️</span>
-          <span>info@4idm.com.sa</span>
-        </a>
+        <address className="not-italic">
+          <a
+            href="mailto:info@4idm.com.sa"
+            className="flex items-center gap-2 bg-white/10 hover:bg-white/20 transition-colors rounded-full px-5 py-2.5 text-white text-sm"
+          >
+            <span>✉️</span>
+            <span>info@4idm.com.sa</span>
+          </a>
+        </address>
       </div>
       <p className="text-center text-white/30 text-xs mt-6">
         © {new Date().getFullYear()} أربعة أفكار للدعاية والإعلان — جميع الحقوق محفوظة

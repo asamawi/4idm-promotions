@@ -1,8 +1,24 @@
 import type { Metadata } from "next";
+import JsonLd from "../components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "خدماتنا — أربعة أفكار للدعاية والإعلان",
-  description: "نقدم خدمات التصميم والطباعة والتصنيع والهدايا والتسويق",
+  title: "خدماتنا",
+  description: "نقدم خدمات التصميم والطباعة والتصنيع والهدايا الترويجية والتسويق — أربعة أفكار للدعاية والإعلان في المملكة العربية السعودية",
+  openGraph: { url: "https://www.4idm.com.sa/services" },
+  alternates: { canonical: "https://www.4idm.com.sa/services" },
+};
+
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "خدمات أربعة أفكار للدعاية والإعلان",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "التصميم", description: "تصميم هوية للشركات، رسومات كرتونية، تصميم ثلاثي الأبعاد" },
+    { "@type": "ListItem", position: 2, name: "الطباعة وأنواعها", description: "طباعة داخلية وخارجية، استاندات دعائية، طباعة حرارية DTF وUV، أكريليك وخشب" },
+    { "@type": "ListItem", position: 3, name: "التصنيع", description: "تصنيع استاندات معارض، تصنيعات خشبية، حروف بارزة، مجسمات" },
+    { "@type": "ListItem", position: 4, name: "الهدايا والترويج", description: "طباعة على هدايا دعائية، تقاويم خشبية، ملابس دعائية، دمى وشخصيات كرتونية" },
+    { "@type": "ListItem", position: 5, name: "التسويق", description: "أفكار تسويقية، حجز مواقع في المولات والفنادق، تنظيم معارض ومؤتمرات" },
+  ],
 };
 
 const services = [
@@ -64,6 +80,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <div dir="rtl">
+      <JsonLd data={servicesSchema} />
       {/* Page hero */}
       <section className="bg-gradient-to-l from-[#1a2a6c] to-[#0d1540] py-16 px-6 text-center">
         <h1 className="text-5xl font-black text-white mb-3">خدماتنا</h1>

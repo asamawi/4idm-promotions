@@ -1,5 +1,14 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import JsonLd from "./components/JsonLd";
+
+export const metadata: Metadata = {
+  title: "أربعة أفكار للدعاية والإعلان — حلول إعلانية متكاملة",
+  description: "شركة أربعة أفكار للدعاية والإعلان تقدم خدمات التصميم والطباعة والتصنيع والهدايا الترويجية والتسويق في المملكة العربية السعودية",
+  openGraph: { title: "أربعة أفكار للدعاية والإعلان — حلول إعلانية متكاملة", url: "https://www.4idm.com.sa/" },
+  alternates: { canonical: "https://www.4idm.com.sa/" },
+};
 
 const services = [
   {
@@ -44,6 +53,12 @@ const values = [
 export default function Home() {
   return (
     <div dir="rtl">
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "أربعة أفكار للدعاية والإعلان",
+        url: "https://www.4idm.com.sa",
+      }} />
       {/* Hero */}
       <section className="relative min-h-[calc(100vh-4rem)] bg-white flex items-center justify-center overflow-hidden">
         {/* Decorative circles */}
@@ -63,8 +78,7 @@ export default function Home() {
             />
           </div>
 
-          {/* H1 visually hidden but present for SEO */}
-          <h1 className="sr-only">أربعة أفكار للدعاية والإعلان — Four Ideas Advertising</h1>
+          <h1 className="text-2xl font-black text-[#1a2a6c] mb-1">أربعة أفكار للدعاية والإعلان</h1>
 
           <p className="text-[#e07b00] text-xl font-medium mb-10">
             حلول إعلانية متكاملة ... من الفكرة إلى التنفيذ

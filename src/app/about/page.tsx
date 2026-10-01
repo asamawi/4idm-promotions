@@ -1,9 +1,30 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import JsonLd from "../components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "من نحن — أربعة أفكار للدعاية والإعلان",
-  description: "تعرف على شركة أربعة أفكار للدعاية والإعلان وقيمنا وطريقة التواصل معنا",
+  title: "من نحن",
+  description: "تعرف على شركة أربعة أفكار للدعاية والإعلان — حلول إعلانية متكاملة في المملكة العربية السعودية. نقدم خدمات التصميم والطباعة والتصنيع والتسويق.",
+  openGraph: { url: "https://www.4idm.com.sa/about" },
+  alternates: { canonical: "https://www.4idm.com.sa/about" },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "أربعة أفكار للدعاية والإعلان",
+  alternateName: "Four Ideas Advertising",
+  url: "https://www.4idm.com.sa",
+  email: "info@4idm.com.sa",
+  image: "https://www.4idm.com.sa/logo-hero.png",
+  address: { "@type": "PostalAddress", addressCountry: "SA" },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+    opens: "09:00",
+    closes: "18:00",
+  },
+  description: "حلول إعلانية متكاملة من التصميم والطباعة والتصنيع إلى الهدايا الترويجية والتسويق",
 };
 
 const values = [
@@ -16,6 +37,7 @@ const values = [
 export default function AboutPage() {
   return (
     <div dir="rtl">
+      <JsonLd data={localBusinessSchema} />
       {/* Page hero */}
       <section className="bg-gradient-to-l from-[#1a2a6c] to-[#0d1540] py-16 px-6 text-center">
         <h1 className="text-5xl font-black text-white mb-3">من نحن</h1>
